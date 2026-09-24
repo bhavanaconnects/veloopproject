@@ -1,0 +1,63 @@
+.page {
+  max-width: 760px;
+  padding-top: 32px;
+  padding-bottom: 64px;
+}
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.title {
+  margin: 12px 0 8px;
+  font-size: clamp(1.8rem, 1.3rem + 1.6vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.intro { font-size: 1.05rem; max-width: 60ch; }
+.codeBox {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 12px 0 8px;
+  padding: 14px 20px;
+  border-radius: var(--radius-panel);
+  border: 1px solid var(--surface-line-strong);
+  background: var(--surface-1);
+}
+.codeLabel { font-size: 0.85rem; color: var(--text-muted); }
+.code { font-size: 1.4rem; font-weight: 800; letter-spacing: 0.06em; color: var(--text-strong); }
+.how {
+  margin-top: 28px;
+  padding: 24px 28px;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--surface-line);
+  background: linear-gradient(160deg, var(--surface-1), var(--surface-2));
+}
+.howTitle { font-size: 1.2rem; font-weight: 700; margin: 0 0 12px; }
+.steps { margin: 0; padding-left: 1.3rem; display: grid; gap: 10px; }
+.steps li::marker { color: var(--gold-300); font-weight: 700; }
+.note {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin-top: 24px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+.note svg { flex-shrink: 0; margin-top: 3px; }
+
+.share {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  margin-top: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #8fe3b4;
+}
+.share:hover { color: #b9f0d0; }

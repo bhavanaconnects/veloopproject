@@ -1,0 +1,46 @@
+/* VELOOP Rewards design tokens */
+:root {
+  --app-bg: #161827;
+
+  /* card surfaces: a step lighter than the body so cards read as raised */
+  --surface-1: #1b1e36;
+  --surface-2: #121429;
+  --surface-line: rgba(196, 204, 235, 0.10);
+  --surface-line-strong: rgba(196, 204, 235, 0.18);
+
+  /* text */
+  --text-strong: #f4f5fa;
+  --text-body: #b7bbd0;
+  --text-muted: #8a8fa8;
+
+  /* reward palette */
+  --gold-100: #f7e2b3;
+  --gold-300: #e9c37e;
+  --gold-500: #c9974a;
+  --gold-700: #8c6428;
+  --violet-300: #b9a6ff;
+  --violet-500: #8b6cf0;
+  --violet-700: #5a3fc4;
+  --blue-300: #9db6ff;
+  --blue-500: #5b82f0;
+  --blue-700: #2f4fb8;
+  --teal-300: #7fd6e6;
+  --silver: #c9cfdd;
+  --success: #6fd3a3;
+
+  /* type */
+  --font-sans: 'Plus Jakarta Sans Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* radii */
+  --radius-card: 24px;
+  --radius-panel: 14px;
+  --radius-pill: 999px;
+
+  /* motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 180ms;
+  --dur-med: 320ms;
+
+  /* banner heights (from the assignment) */
+  --banner-h-desktop: 440px;
+}

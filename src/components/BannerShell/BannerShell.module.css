@@ -1,0 +1,89 @@
+.banner {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(160deg, var(--surface-1) 0%, var(--surface-2) 100%);
+  border: 1px solid var(--surface-line);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 18px 40px -24px rgba(0, 0, 0, 0.7);
+
+  /* Mobile: 330–520px */
+  min-height: 330px;
+  max-height: 520px;
+
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 600ms var(--ease-out),
+    transform 600ms var(--ease-out),
+    border-color var(--dur-med) ease,
+    box-shadow var(--dur-med) ease;
+}
+
+.banner[data-inview='true'] {
+  opacity: 1;
+  transform: none;
+}
+
+.banner[data-inview='true']:hover {
+  transform: translateY(-3px);
+  border-color: var(--surface-line-strong);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 28px 50px -26px rgba(0, 0, 0, 0.85);
+}
+
+/* Tablet: 380–540px */
+@media (min-width: 768px) {
+  .banner {
+    min-height: 380px;
+    max-height: 540px;
+  }
+}
+
+/* Laptop / desktop: 410–450px */
+@media (min-width: 992px) {
+  .banner {
+    height: var(--banner-h-desktop);
+    min-height: 410px;
+    max-height: 450px;
+  }
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+
+/* soft radial light behind the illustration, tinted per banner */
+.backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(60% 80% at 72% 45%, var(--glow, rgba(91, 130, 240, 0.16)), transparent 70%),
+    radial-gradient(40% 50% at 8% 100%, rgba(255, 255, 255, 0.03), transparent 70%);
+}
+
+/* faint grid texture — reads as "product", not "poster" */
+.backdrop::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(70% 80% at 70% 50%, #000 20%, transparent 75%);
+}
+
+.gold { --glow: rgba(233, 195, 126, 0.12); }
+.violet { --glow: rgba(139, 108, 240, 0.22); }
+.blue { --glow: rgba(91, 130, 240, 0.22); }
+.refer { --glow: rgba(110, 100, 240, 0.22); }
+.exchange { --glow: rgba(139, 108, 240, 0.14); }
+
+@media (hover: none) {
+  .banner[data-inview='true']:hover { transform: none; }
+}

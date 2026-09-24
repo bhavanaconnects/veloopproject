@@ -1,0 +1,48 @@
+@import './tokens.css';
+
+html, body {
+  background: var(--app-bg);
+  color: var(--text-body);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body { min-height: 100vh; }
+
+/* Bootstrap resets headings with its own color/weights — keep ours */
+h1, h2, h3, h4 { color: var(--text-strong); font-family: var(--font-sans); }
+
+a { color: var(--gold-300); }
+a:hover { color: var(--gold-100); }
+
+:focus-visible {
+  outline: 3px solid var(--gold-300);
+  outline-offset: 3px;
+}
+
+.visually-hidden-focusable:focus { position: static !important; }
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -60px;
+  z-index: 100;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: var(--gold-300);
+  color: #1a1406;
+  font-weight: 700;
+  text-decoration: none;
+  transition: top var(--dur-fast);
+}
+.skip-link:focus { top: 12px; color: #1a1406; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

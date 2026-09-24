@@ -1,0 +1,24 @@
+.header {
+  border-bottom: 1px solid var(--surface-line);
+  background: rgba(22, 24, 39, 0.85);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.bar {
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-strong);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+.brand:hover { color: #fff; }
+.brandSub { font-weight: 500; color: var(--text-body); letter-spacing: 0; }
